@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  text-align: right;
+  font-size: 24px;
+  background-color: #6fe6c7;
+  padding: 20px;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+#navbar a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+#navbar a:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+#navbar a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transform-origin: right;
+  transition: transform 0.25s ease-out;
+}
+
+#navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(20deg, #f39563, #f25256);
+  height: 100vh;
+  margin-top: -70px;
+  padding-top: 50px;
+  border-bottom: solid 3px #6fe6c7;
+}
+
+#welcome-section h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-bottom: -15px;
+}
+
+#welcome-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: #6fe6c7;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  margin: auto;
+  width: 1040px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  grid-gap: 40px;
+}
+
+#projects-div {
+  background-image: linear-gradient(190deg, #f39563, #f25256);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: solid .2rem #6fe6c7;
+}
+
+#projects-div h2 {
+  max-width: 470px;
+  margin: 0 auto 6rem auto;
+  padding: .2rem;
+  border-bottom: solid 0.15rem white;
+  font-family: 'Raleway';
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
+
+#projects img {
+  height: 336px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  text-decoration: none;
+  color: white;
+  background-color: white;
+  border-radius: 3px;
+  
+}
+
+.project-title {
+  background-color: #303841;
+  height: 4rem;
+  padding-top: 18px;
+  font-size: 1.2rem;
+}
+
+.code {
+  color: #303841;
+  transition: color .3s ease-out;
+}
+
+.project-tile:hover .code {
+  color: #f78000;
+}
+
+@media only screen and (max-width: 1000px) {
+  #projects {
+    grid-template-columns: 500px;
+    width: 500px;
+  }
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.button-div a {
+  text-decoration: none;
+  color: white;
+}
+
+.show-all-button {
+  background-color: #303841;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  border-radius: 3px;
+}
+
+.show-all-button div {
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: transform .3s;
+}
+
+.show-all-button:hover {
+  background-color: rgba(111, 230, 199, .9);
+  transition: background-color ease-in .3s;
+}
+
+.show-all-button:hover div{
+  transform: translateX(2px);
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #303841;
+  height: 100vh;
+  color: white;
+  border-bottom: solid 2px white;
+}
+
+#contact h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: .1rem;
+}
+
+#contact p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+#profile-link {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 2rem;
+  transition: transform .3s ease-out;
+}
+
+#profile-link:hover {
+  transform: translateY(10px);
+}
+
+footer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #6fe6c7;
+  height: 4.4rem;
+  padding-right: 5rem;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 1.rem;
+}
